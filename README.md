@@ -1,3 +1,67 @@
+
+
+Follow these steps to run the project locally:
+
+### 1. Clone the repository
+ ``` 
+git clone https://github.com/VirenSumbly/React-Quiz-roadmap.sh-.git
+ ```
+
+### 2. Navigate into the project directory
+```
+ cd React-Quiz-roadmap.sh-
+```
+
+### 3. Install dependencies
+``` 
+npm install
+```
+
+### 4. Start the development server
+```
+npm run dev
+```
+
+### 5. Open in browser
+
+After running the command, you’ll see a local URL (usually something like):
+
+```
+http://localhost:5173/
+```
+
+Open it in your browser to view the app.
+
+### Project Overview
+
+This is a React-based quiz application that:
+
+Displays questions from a JSON file
+
+Allows single-option selection per question
+
+Tracks user progress
+
+Shows results at the end
+
+### Tech Stack
+
+React (Vite)
+
+Tailwind CSS
+
+shadcn/ui
+
+React Router
+
+###  Notes
+Make sure you have Node.js (v16 or higher) installed
+
+If styles don’t load, ensure Tailwind is configured properly
+
+If routing doesn’t work, check that all routes are defined correctly
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
