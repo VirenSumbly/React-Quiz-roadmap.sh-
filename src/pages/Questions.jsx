@@ -55,24 +55,21 @@ export default function FieldCheckbox() {
 
 
           </FieldGroup>
-        <Button variant="outline" size="sm" onClick={()=>{
-          if(qNum == 4){
-            return navigate('/result', { state: { score } })
-            
+        <Button variant="outline" size="sm" onClick={() => {
+          let newScore = score
 
-            }
-          else{
-            if (selected === questions[qNum].correctAnswer){
-              console.log("correct answer")
-              setScore(score + 1)
-            }
-            
-            
-            return setQNum(qNum+1)
-
+          if (selected === questions[qNum].correctAnswer) {
+            newScore = score + 1
+            setScore(newScore)
           }
-          
-          }} className="w-full bg-purple-950 text-amber-50">
+
+          if (qNum === questions.length - 1) {
+            navigate('/result', { state: { score: newScore } })
+          } else {
+            setQNum(qNum + 1)
+            setSelected(null)
+          }
+}} className="w-full bg-purple-950 text-amber-50">
             SUBMIT
           </Button>
         </FieldSet>
